@@ -130,7 +130,7 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <form name="comprar" action="controllers/mp.php" method="post" enctype="multipart/form-data">
+                                    <form name="comprar" method="post">
                                         <input type="text" name="title" value="<?php echo $_POST['title'] ?>">
                                         <input type="text" name="price" value="<?php echo $_POST['price'] ?>">
                                         <input type="text" name="unit" value="<?php echo $_POST['unit'] ?>">
@@ -163,9 +163,9 @@
     $('form').submit(function(event){
         event.preventDefault();
 
-        var form = $("form[name='comprar']")[0];
+        var form = $("form")[0];
         var data = new FormData(form);
-        // data.append('custom', '2');
+        data.append('action', 'create_preference');
 
         data.forEach(function(v, i){
             console.warn(i + ": " + v);
@@ -176,7 +176,7 @@
         $.ajax({
             type: "POST",
             enctype: 'multipart/form-data',
-            url: "controllers/mp.php",
+            url: "mp.php",
             data: data,
             processData: false,
             contentType: false,
@@ -196,7 +196,6 @@
                 $(".mercadopago-button").prop("disabled", false);
             }
         });
-
     });
 
     // Adicione as credenciais do SDK
