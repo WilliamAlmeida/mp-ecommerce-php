@@ -9,9 +9,6 @@ $path = req('action');
 // Adicione as credenciais
 MercadoPago\SDK::setAccessToken('APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327');
 
-echo $path;
-return;
-
 switch($path){
 	case 'create_preference':
 		$json = file_get_contents("php://input");
