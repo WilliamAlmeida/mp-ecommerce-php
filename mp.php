@@ -7,7 +7,7 @@ require __DIR__ .  '/controllers/helper.php';
 $path = req('action');
 
 // Adicione as credenciais
-MercadoPago\SDK::setAccessToken('APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327');
+MercadoPago\SDK::setAccessToken('TEST-7068988218222252-062214-dc8eceb9c7e07c14b857dea57a3d3c73-54814172');
 
 switch($path){
 	case 'create_preference':

@@ -131,13 +131,13 @@
                                         </h3>
                                     </div>
                                     <form name="comprar" method="post">
-                                        <input type="text" name="title" value="<?php echo $_POST['title'] ?>">
-                                        <input type="text" name="price" value="<?php echo $_POST['price'] ?>">
-                                        <input type="text" name="unit" value="<?php echo $_POST['unit'] ?>">
-                                        <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                        <input type="hidden" name="title" value="<?php echo $_POST['title'] ?>">
+                                        <input type="hidden" name="price" value="<?php echo $_POST['price'] ?>">
+                                        <input type="hidden" name="unit" value="<?php echo $_POST['unit'] ?>">
+                                        <button type="submit" class="mercadopago-button" style="display: none;" formmethod="post">Pagar</button>
+                                        <div class="cho-container"></div>
                                     </form>
                                     <div id="response_message"></div>
-                                    <div class="cho-container"></div>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
         <div class="as-footnotes">
             <div class="as-footnotes-content">
                 <div class="as-footnotes-sosumi">
-                    Todos los derechos reservados Tienda Tecno 2019 - v1.5
+                    Todos los derechos reservados Tienda Tecno 2019 - v1.7
                 </div>
             </div>
         </div>
@@ -160,6 +160,10 @@
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 
 <script type="text/javascript">
+    $(document).reads(function(){
+        $('form').submit();
+    })
+
     $('form').submit(function(event){
         event.preventDefault();
 
