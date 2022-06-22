@@ -190,7 +190,7 @@
                 console.log("SUCCESS : ", data);
                 $(".mercadopago-button").prop("disabled", false);
 
-                // mp_checkout(1);
+                mp_checkout(data.id);
             },
             error: function (e) {
                 $("#response_message").text(e.responseText);
