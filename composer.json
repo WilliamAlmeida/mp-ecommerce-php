@@ -1,5 +1,6 @@
 {
-    "name": "mp-ecommerce-php",
-    "type": "project",
+    "name": "william/mp-ecommerce-php",
+    "description": "exame mp",
+    "minimum-stability": "dev",
     "require": {}
 }
