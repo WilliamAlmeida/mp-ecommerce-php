@@ -11,15 +11,12 @@ MercadoPago\SDK::setAccessToken('APP_USR-334491433003961-030821-12d7475807d694b6
 
 switch($path){
 	case 'create_preference':
-		$json = file_get_contents("php://input");
-		$data = json_decode($json);
-
 		$preference = new MercadoPago\Preference();
 
 		$item = new MercadoPago\Item();
-		$item->title = $data->title;
-		$item->quantity = $data->unit;
-		$item->unit_price = $data->price;
+		$item->title = req('title');
+		$item->quantity = req('unit');
+		$item->unit_price = req('price');
 
 		$preference->items = array($item);
 
@@ -45,6 +42,8 @@ switch($path){
 		); 
 		echo json_encode($respuesta);
 	break;
+	default:
+		echo 'sem parametro de ação';
 }
 
 return;
