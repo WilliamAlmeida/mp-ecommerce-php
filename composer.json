@@ -2,5 +2,7 @@
     "name": "william/mp-ecommerce-php",
     "description": "exame mp",
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "mercadopago/dx-php": "dev-master"
+    }
 }
