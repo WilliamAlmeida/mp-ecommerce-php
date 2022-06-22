@@ -173,10 +173,12 @@
 
         $(".mercadopago-button").prop("disabled", true);
 
+        let url = "mp.php?" + new URLSearchParams(data).toString();
+
         $.ajax({
-            type: "POST",
+            type: "GET",
             enctype: 'multipart/form-data',
-            url: "mp.php",
+            url: url,
             data: data,
             processData: false,
             contentType: false,
