@@ -134,12 +134,12 @@
                                         <input type="hidden" name="title" value="<?php echo $_POST['title'] ?>">
                                         <input type="hidden" name="price" value="<?php echo $_POST['price'] ?>">
                                         <input type="hidden" name="unit" value="<?php echo $_POST['unit'] ?>">
-                                        <button type="submit" class="mercadopago-button" formmethod="post">Iniciar Pagamento</button>
+                                        <button type="submit" class="mercadopago-button" formmethod="post">Abrir Formulário de Pagamento</button>
                                         <br/>
                                         <br/>
-                                        <div class="cho-container"></div>
                                     </form>
                                     <div id="response_message"></div>
+                                    <div class="cho-container"></div>
                                 </div>
                             </div>
                         </div>
@@ -162,10 +162,6 @@
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('form').submit();
-    })
-
     $('form').submit(function(event){
         event.preventDefault();
 
