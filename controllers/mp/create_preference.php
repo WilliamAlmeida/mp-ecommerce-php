@@ -6,7 +6,10 @@ require __DIR__ .  '/../../controllers/helper.php';
 // SDK do Mercado Pago
 require __DIR__ .  '/../../vendor/autoload.php';
 
-MercadoPago\SDK::setIntegratorId("integrator_id");
+echo '{"id":"725736327-a5d71c25-fe20-4139-924d-75ee5b69ca47","url":"https:\/\/www.mercadopago.com.br\/checkout\/v1\/redirect?pref_id=725736327-a5d71c25-fe20-4139-924d-75ee5b69ca47"}';
+return;
+
+MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
 
 // Adicione as credenciais
 MercadoPago\SDK::setAccessToken($credentials[$modo_mp]['key_s']);

@@ -151,6 +151,8 @@
                 console.log("SUCCESS : ", data);
                 $(".mercadopago-button").prop("disabled", false);
 
+                data = JSON.parse(data);
+
                 if(data.url) {
                     window.location = data.url;
                 }else if(data.id) {

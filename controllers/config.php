@@ -1,6 +1,6 @@
 <?php
 
-$version = '1.3';
+$version = '1.4';
 
 $money_prefix = 'R$';
 
