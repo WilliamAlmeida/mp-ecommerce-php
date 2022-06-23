@@ -7,7 +7,7 @@ require __DIR__ .  '/../../controllers/helper.php';
 require __DIR__ .  '/../../vendor/autoload.php';
 
 // Adicione as credenciais
-MercadoPago\SDK::setAccessToken($credentials[$modo_mp]['secret']);
+MercadoPago\SDK::setAccessToken($credentials[$modo_mp]['key_s']);
 
 $preference = new MercadoPago\Preference();
 

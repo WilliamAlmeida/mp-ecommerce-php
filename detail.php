@@ -147,7 +147,9 @@
                 console.log("SUCCESS : ", data);
                 $(".mercadopago-button").prop("disabled", false);
 
-                if(data.hasOwnProperty('id')) {
+                console.warn(data.hasOwnProperty('id'));
+                if(data.hasOwnProperty('id') == true) {
+                    console.warn(data.id);
                     mp_checkout(data.id);
                 }
             },
@@ -160,7 +162,7 @@
         });
 
         /* Adicione as credenciais do SDK */
-        const mp = new MercadoPago("<?php echo $credentials[$modo_mp]['public_key'] ?>", {
+        const mp = new MercadoPago("<?php echo $credentials[$modo_mp]['key_p'] ?>", {
             locale: 'pt-BR'
         });
 
