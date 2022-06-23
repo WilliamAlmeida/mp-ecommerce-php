@@ -2,7 +2,7 @@
 
 $origin = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'];
 
-$version = '1.7';
+$version = '1.8';
 
 $money_prefix = 'R$';
 
@@ -21,10 +21,10 @@ $credentials['t'] = [
 ];
 
 // Credenciais do Exame
-// $credentials['t'] = [
-// 	'key_p' => "APP_USR-46f0fc47-5251-44c9-bf0d-c196123bad4f",
-// 	'key_s' => "APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327"
-// ];
+$credentials['t'] = [
+	'key_p' => "APP_USR-46f0fc47-5251-44c9-bf0d-c196123bad4f",
+	'key_s' => "APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327"
+];
 
 /*
 {
