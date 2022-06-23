@@ -56,6 +56,8 @@ $preference->back_urls = array(
 	"failure" => "https://williamalmeida-mp-commerce-php.herokuapp.com/controllers/mp/feedback.php", 
 	"pending" => "https://williamalmeida-mp-commerce-php.herokuapp.com/controllers/mp/feedback.php"
 );
+
+$preference->binary_mode = true;
 $preference->auto_return = "approved"; 
 $preference->external_reference = 'williamkillerca@hotmail.com';
 $preference->statement_descriptor = 'Tienda e-commerce';

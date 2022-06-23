@@ -93,7 +93,7 @@ if(!isset($_POST['title'])) header("Location: ".$origin);
                                         <input type="hidden" name="title" value="<?php echo $_POST['title'] ?>">
                                         <input type="hidden" name="price" value="<?php echo $_POST['price'] ?>">
                                         <input type="hidden" name="unit" value="<?php echo $_POST['unit'] ?>">
-                                        <button type="submit" class="mercadopago-button" formmethod="post">Abrir formulario de pago</button>
+                                        <button type="submit" class="mercadopago-button" formmethod="post">Pague a Compra</button>
                                     </form>
 
                                     <br/>
@@ -181,10 +181,10 @@ if(!isset($_POST['title'])) header("Location: ".$origin);
                 preference: {
                     id: value
                 },
-                autoOpen: true,
+                // autoOpen: true,
                 render: {
                     container: '.cho-container', // Indique o nome da class onde será exibido o botão de pagamento
-                    label: 'Pagar', // Muda o texto do botão de pagamento (opcional)
+                    label: 'Pague a Compra', // Muda o texto do botão de pagamento (opcional)
                 },
             });
         }
