@@ -51,6 +51,7 @@ $payer = new MercadoPago\Payer([
 
 $preference->payer = $payer;
 
+$preference->notification_url = "https://williamalmeida-mp-commerce-php.herokuapp.com/controllers/mp/notification.php";
 $preference->back_urls = array(
 	"success" => "https://williamalmeida-mp-commerce-php.herokuapp.com/controllers/mp/feedback.php",
 	"failure" => "https://williamalmeida-mp-commerce-php.herokuapp.com/controllers/mp/feedback.php", 
