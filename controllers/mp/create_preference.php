@@ -31,22 +31,21 @@ $item->picture_url = req('image');
 $preference->items = array($item);
 
 $payer = new MercadoPago\Payer([
-	"name": "Lalo",
-	"surname": "Landa",
-	"email": "test_user_92801501@testuser.com",
-	"phone": {
-		"area_code": "55",
-		"number": "98529-8743"
-	},
-	"address": {
-		"street_name": "falsa",
-		"street_number": 123,
-		"zip_code": "78134190"
-	}
+	"name" => "Lalo",
+	"surname" => "Landa",
+	"email" => "test_user_92801501@testuser.com",
+	"phone" => [
+		"area_code"=> "55",
+		"number"=> "98529-8743"
+	],
+	"address" => [
+		"street_name" => "falsa",
+		"street_number" => 123,
+		"zip_code" => "78134190"
+	]
 ]);
 
-var_dump($payer);
-return;
+$preference->payer = $payer;
 
 $preference->back_urls = array(
 	"success" => "https://williamalmeida-mp-commerce-php.herokuapp.com/controllers/mp/feedback.php",
