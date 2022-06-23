@@ -1,6 +1,6 @@
 <?php
 
-$version = '1.5';
+$version = '1.6';
 
 $money_prefix = 'R$';
 
@@ -14,7 +14,7 @@ $credentials['p'] = [
 
 // Credenciais de teste
 $credentials['t'] = [
-	'key_p' => "TEST-95a06822-1c44-4b55-bf08-70997f240aa7",
+	'key_p' => "'TEST-95a06822-1c44-4b55-bf08-70997f240aa7'",
 	'key_s' => "TEST-7068988218222252-062214-dc8eceb9c7e07c14b857dea57a3d3c73-54814172"
 ];
 
@@ -23,5 +23,15 @@ $credentials['t'] = [
 // 	'key_p' => "APP_USR-46f0fc47-5251-44c9-bf0d-c196123bad4f",
 // 	'key_s' => "APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327"
 // ];
+
+/*
+{
+    "id": 1147967020,
+    "nickname": "TETE9497308",
+    "password": "qatest8872",
+    "site_status": "active",
+    "email": "test_user_8516653@testuser.com"
+}
+*/
 
 ?>

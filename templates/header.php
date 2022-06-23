@@ -12,6 +12,7 @@
                                 Tienda e-commerce
                             </a>
                         </h1>
+                        <small>versión: <?php echo $version ?></small>
                     </div>
                 </div>
             </div>
