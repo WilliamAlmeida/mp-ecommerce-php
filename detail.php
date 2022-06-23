@@ -174,11 +174,11 @@
                 preference: {
                     id: value
                 },
+                autoOpen: true,
                 render: {
                     container: '.cho-container', // Indique o nome da class onde será exibido o botão de pagamento
                     label: 'Pagar', // Muda o texto do botão de pagamento (opcional)
                 },
-                autoOpen: true
             });
         }
     </script>

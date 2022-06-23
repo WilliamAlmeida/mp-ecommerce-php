@@ -59,6 +59,7 @@ $preference->save();
 
 $response = array(
 	'id' => $preference->id,
+	'url' => $preference->init_point,
 ); 
 echo json_encode($response);
 ?>
