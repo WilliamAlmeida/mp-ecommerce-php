@@ -86,11 +86,14 @@
                                         </h3>
                                     </div>
                                     <form name="comprar" method="post">
+                                        <input type="hidden" name="image" value="https://williamalmeida-mp-commerce-php.herokuapp.com/<?php echo substr($_POST['img'], 1) ?>">
                                         <input type="hidden" name="title" value="<?php echo $_POST['title'] ?>">
                                         <input type="hidden" name="price" value="<?php echo $_POST['price'] ?>">
                                         <input type="hidden" name="unit" value="<?php echo $_POST['unit'] ?>">
                                         <button type="submit" class="mercadopago-button" formmethod="post">Abrir formulario de pago</button>
                                     </form>
+
+                                    <br/>
 
                                     <div class="cho-container"></div>
 
@@ -114,6 +117,7 @@
 
     <!-- // SDK MercadoPago.js V2 -->
     <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
 
     <script type="text/javascript">
         $('form').submit(function(event){
@@ -143,13 +147,11 @@
                 timeout: 800000,
                 async: true,
             success: function (data) {
-                $("#response_message").text(data);
+                // $("#response_message").text(data);
                 console.log("SUCCESS : ", data);
                 $(".mercadopago-button").prop("disabled", false);
 
-                console.warn(data.hasOwnProperty('id'));
-                if(data.hasOwnProperty('id') == true) {
-                    console.warn(data.id);
+                if(data.id) {
                     mp_checkout(data.id);
                 }
             },
@@ -173,10 +175,11 @@
                     id: value
                 },
                 render: {
-                container: '.cho-container', // Indique o nome da class onde será exibido o botão de pagamento
-                label: 'Pagar', // Muda o texto do botão de pagamento (opcional)
-            }
-        });
+                    container: '.cho-container', // Indique o nome da class onde será exibido o botão de pagamento
+                    label: 'Pagar', // Muda o texto do botão de pagamento (opcional)
+                },
+                autoOpen: true
+            });
         }
     </script>
 </body>
