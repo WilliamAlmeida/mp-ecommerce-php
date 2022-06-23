@@ -1,0 +1,21 @@
+.d-none {
+	display: none !important;
+}
+
+img.img-fluid {
+	 max-width: 245px !important;
+	 max-height: 245px !important;
+	 padding: 20px 0px;
+}
+
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+
+a.text-dark {
+	color: #000;
+}
+
+.text-decoration-none {
+	text-decoration: none !important;
+}
