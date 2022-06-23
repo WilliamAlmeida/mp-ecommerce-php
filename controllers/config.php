@@ -2,7 +2,7 @@
 
 $origin = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'];
 
-$version = '1.8';
+$version = '1.10';
 
 $money_prefix = 'R$';
 

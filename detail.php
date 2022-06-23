@@ -1,5 +1,8 @@
 <?php require_once('./controllers/config.php'); ?>
 <?php require_once('./controllers/products.php'); ?>
+<?php 
+if(!isset($_POST['title'])) header("Location: ".$origin);
+?>
 
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

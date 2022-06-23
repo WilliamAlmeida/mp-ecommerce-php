@@ -14,5 +14,13 @@ $respuesta = $_GET;
 
 cookie("payment", json_encode($respuesta), time()+3600, '/');
 
+$file_name = 'mp_'.req('payment_id');
+$dir = '../../assets/files/mp/';
+$myfile = fopen($dir.$file_name.".txt", "w") or 0;
+if($myfile) {
+	fwrite($myfile, json_encode($respuesta));
+	fclose($myfile);
+}
+
 header("Location: ".$origin.'/feedback.php');
 ?>
