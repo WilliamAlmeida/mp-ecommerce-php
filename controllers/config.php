@@ -1,6 +1,8 @@
 <?php
 
-$version = '1.6';
+$origin = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'];
+
+$version = '1.7';
 
 $money_prefix = 'R$';
 
@@ -32,6 +34,15 @@ $credentials['t'] = [
     "site_status": "active",
     "email": "test_user_8516653@testuser.com"
 }
+
+cancelado pelo usuário
+
+http://mp.supremus.com/controllers/mp/feedback.php?collection_id=null&collection_status=null&payment_id=null&status=null&external_reference=williamkillerca@hotmail.com&payment_type=null&merchant_order_id=null&preference_id=725736327-a5d71c25-fe20-4139-924d-75ee5b69ca47&site_id=MLB&processing_mode=aggregator&merchant_account_id=null
+
+venda finalizada
+
+http://mp.supremus.com/controllers/mp/feedback.php?collection_id=23403281996&collection_status=accredited&payment_id=23403281996&status=approved&external_reference=williamkillerca@hotmail.com&payment_type=credit_card&merchant_order_id=5036216613&preference_id=725736327-a5d71c25-fe20-4139-924d-75ee5b69ca47&site_id=MLB&processing_mode=aggregator&merchant_account_id=null
+
 */
 
 ?>
