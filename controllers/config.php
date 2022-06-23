@@ -1,6 +1,6 @@
 <?php
 
-$version = '1.2';
+$version = '1.3';
 
 $money_prefix = 'R$';
 
@@ -20,7 +20,7 @@ $credentials['t'] = [
 
 // Credenciais do Exame
 $credentials['t'] = [
-	'key_p' => "TEST-95a06822-1c44-4b55-bf08-70997f240aa7",
+	'key_p' => "APP_USR-46f0fc47-5251-44c9-bf0d-c196123bad4f",
 	'key_s' => "APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327"
 ];
 

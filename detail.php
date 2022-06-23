@@ -151,7 +151,9 @@
                 console.log("SUCCESS : ", data);
                 $(".mercadopago-button").prop("disabled", false);
 
-                if(data.id) {
+                if(data.url) {
+                    window.location = data.url;
+                }else if(data.id) {
                     mp_checkout(data.id);
                 }
             },
